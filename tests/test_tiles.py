@@ -35,7 +35,8 @@ class TestTiles(unittest.TestCase):
         red_dragon = Tile(Suit.DRAGON, 1)
         self.assertTrue(red_dragon.is_honor)
         self.assertEqual(red_dragon.name, "中")
-        self.assertEqual(red_dragon.glyph, "🀄")
+        self.assertEqual(red_dragon.get_name("en"), "Red Dragon")
+        self.assertEqual(t1.get_name("en"), "1 Character")
 
     def test_tile_sorting(self):
         t_wan9 = Tile(Suit.WAN, 9)
